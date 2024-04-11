@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> it's calculator</title>
+    <style>
+  body{
+    margin:0;
+    padding: 0;
+  }
+ #effect{
+        color:rgb(212, 124, 9);
+        font-size: 2.5em;
+        margin-top: 280px;
+        overflow: hidden;
+        white-space:nowrap;
+        width: 0;
+        animation: typing 3s steps(30,end) infinite;
+ }
+      @keyframes typing{
+        from{
+          width:0;
+        }
+        to{
+          width:100%
+        }
+      }
+     
+ .main-div{
+
+       margin-left: 900px;
+       margin-top: 30px;
+       width: 240px;
+       height: 550px;
+       border: 1px solid;
+      padding:0px 10px 0px 10px;
+      border-radius: 5px;
+      overflow: hidden;
+     background-color: rgb(49, 49, 51);
+}
+ .main-div {
+	-webkit-animation: rotate-vert-center 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: rotate-vert-center 1.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+@-webkit-keyframes rotate-vert-center {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+@keyframes rotate-vert-center {
+  0% {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}#display{
+  height: 80px;
+  width: 225px;
+  margin-top: 10px;
+  font-size: 2.5em;
+  background-color: rgb(49, 49, 51);
+  color: whitesmoke;
+  outline: none;
+}
+.btn,#equal ,.extra{
+  width: 50px;
+  margin-left: 8px;
+  height: 50px;
+  border-radius: 10px 0px 10px 0px;
+  margin: 3px;
+  font-size: larger;
+  background-color: rgb(49, 49, 51);
+  margin-top: 20px;  
+}
+.btn{
+  color:white ;
+}
+#equal{
+ color: aqua;
+  width: 105px
+}
+.btn:hover,#equal:hover,.extra:hover{
+
+  box-shadow:2px 1px 2px 1px black ;
+}
+.extra{
+  color: aqua;
+}
+span{
+  margin-top: 250px;
+  margin-left: 200px;
+  font-size: 3em;
+  position: absolute;
+}
+@media  only screen and (max-width:600px) {
+  body{
+    padding:0;
+    margin:0;
+  }
+  
+form, .type{
+  display: flex;
+  flex-direction: column;
+
+  }
+  .type{
+    width: 100vh;
+    height: 50vh;
+ font-size: 8px;
+  }
+ span{
+  margin-left: 30px;
+ margin-top: 20px;
+ margin-bottom: 0;
+
+ }
+  #effect{
+    line-height: 30px;
+    margin-top: 40px;
+  }
+  form{
+width: 100%;
+height: auto;
+margin-top: 0;
+padding: 0 20px;
+}
+.main-div{
+margin-top: -230px;
+margin-left: 40px;
+width: 211px;
+height: 500px;
+border: 1px solid;
+padding:0px 10px 0px 10px;
+border-radius: 5px;
+overflow: hidden;
+background-color: rgb(49, 49, 51);
+}
+.btn ,.extra{
+  width: 40px;
+  margin-left: 10px;
+  height: 50px;
+  border-radius: 10px 0px 10px 0px;
+  margin: 4px;
+  font-size: 1em;
+  background-color: rgb(49, 49, 51);
+  margin-top: 10px;  
+}
+#equal{
+ color: aqua;
+  width: 90px
+}#display{
+  width: 200px;
+}
+
+}
+</style>
+ </head>
+  <body>
+
+<div class="type">
+      <span>Calculator</span>
+      <br>
+      <span id="effect"> using Html,Css & Javascript..</span>
+</div>
+<div >
+   <form name="form">
+   <div class="main-div">
+   <input  id="display" name="container" >
+    <br>
+    <input class="extra" type="button" value=" AC" onclick="form.container.value='' " >
+    <input class="extra" type="button" value=" DE" onclick="form.container.value=form.container.value.slice(0,-1) ">
+    <input class="extra" type="button" value="." onclick="form.container.value += '.' ">
+    <input class="extra" type="button" value="/" onclick="form.container.value += '/' ">
+   <br>
+   <input class="btn" type="button" value="4" onclick="form.container.value += '4' ">
+   <input class="btn" type="button" value="5" onclick="form.container.value += '5' ">
+  <input class="btn" type="button" value="6" onclick="form.container.value += '6' ">
+  <input class="extra" type="button" value="-" onclick="form.container.value += '-' ">
+  <br>
+  <input class="btn" type="button" value="7" onclick="form.container.value += '7' ">
+   <input class="btn" type="button" value="8" onclick="form.container.value += '8' ">
+   <input class="btn" type="button" value="9" onclick="form.container.value += '9' ">
+   <input class="extra" type="button" value="*" onclick="form.container.value += '* '  ">
+   <br>
+   <input class="btn" type="button" value="4" onclick="form.container.value += '4' ">
+   <input class="btn" type="button" value="5" onclick="form.container.value += '5' ">
+   <input class="btn" type="button" value="6" onclick="form.container.value += '6' ">
+  <input class="extra" type="button" value="%" onclick="form.container.value += '%' ">
+  <br>
+   <input class="btn" type="button" value="1" onclick="form.container.value += '1' ">
+  <input class="btn" type="button" value="2" onclick="form.container.value += '2' ">
+  <input class="btn" type="button" value="3" onclick="form.container.value += '3' ">
+ <input class="extra" type="button" value="+" onclick="form.container.value += '+' ">
+ <br>
+ <input class="btn" type="button" value="00" onclick="form.container.value += '00' ">
+ <input class="btn" type="button" value="0" onclick="form.container.value += '0' ">
+ <input id="equal" type="button" value="=" onclick="form.container.value = eval(form.container.value) ">
+<br>
+</div>
+</form>
+</div>
+<script>
+ var a=confirm(" Would you like to visit my calculator?");
+ if(a){
+  alert("welcome to demostration of my calculator");
+ }
+ else{
+  alert("It's okay ");
+ }
+  
+</script>
+</body>
+</html>
